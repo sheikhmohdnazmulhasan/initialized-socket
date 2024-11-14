@@ -10,6 +10,9 @@ const socket = new Server(httpServer, {
 
 socket.on("connection", (socket) => {
   console.log(socket);
+
+  // sending  hello to client;
+  socket.emit("message", "hello!");
 });
 
 httpServer.listen(3000, () => {
