@@ -6,4 +6,6 @@ socket.on("connect", (response) => {
 
 socket.on("message", (res) => {
   console.log(res);
+  //   send data to server
+  socket.emit("message", "hello there");
 });
